@@ -432,11 +432,6 @@ sysdig_init_res csysdig_init(int argc, char **argv)
 					throw sinsp_exception("can't parse the -d argument, make sure it's a number");
 				}
 
-				if(refresh_interval_ns < 100000000)
-				{
-					throw sinsp_exception("Period must be bigger then 100ms");
-				}
-
 				break;
 			case 'E':
 				inspector->set_import_users(false);
